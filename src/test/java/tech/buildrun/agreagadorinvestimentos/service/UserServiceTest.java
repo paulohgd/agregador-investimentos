@@ -150,7 +150,7 @@ class UserServiceTest {
                     UUID.randomUUID(),
                     "username",
                     "password",
-                    "mxzinhen@gmail.com",
+                    "email@email.com",
                     Instant.now(),
                     null
             );
