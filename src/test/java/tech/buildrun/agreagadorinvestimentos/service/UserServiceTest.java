@@ -58,7 +58,7 @@ class UserServiceTest {
                     UUID.randomUUID(),
                     "username",
                     "password",
-                    "mxzinhen@gmail.com",
+                    "email@email.com",
                     Instant.now(),
                     null
             );
@@ -66,7 +66,7 @@ class UserServiceTest {
 
             doReturn(user).when(userRepository).save(userArgumentCaptor.capture());
             var input = new CreateUserDto(
-                    "mxzinhen@gmail.com",
+                    "email@email.com",
                     "dada",
                     "1234"
             );
