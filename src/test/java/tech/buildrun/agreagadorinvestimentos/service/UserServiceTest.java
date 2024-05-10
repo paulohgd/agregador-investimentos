@@ -87,9 +87,9 @@ class UserServiceTest {
         void shouldThrowExcetionWhenErrorOccurs(){
             doThrow(new RuntimeException()).when(userRepository).save(any());
             var input = new CreateUserDto(
-                    "pauloguerra@gmail.com",
-                    "Paulo",
-                    "333"
+                    "email@email.com",
+                    "name",
+                    "123"
             );
 
             //Act & Assert
@@ -108,7 +108,7 @@ class UserServiceTest {
                     UUID.randomUUID(),
                     "username",
                     "password",
-                    "mxzinhen@gmail.com",
+                    "email@email.com",
                     Instant.now(),
                     null
             );
