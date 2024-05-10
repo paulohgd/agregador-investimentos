@@ -22,14 +22,14 @@ public class UserService {
 
     public UUID CreateUser(CreateUserDto createUserDto){
         //PARA FAZER A INSERÇÃO VAMOS CONVERTER DE DTO PARA ENTITY
-        var entity = new User(UUID.randomUUID(), createUserDto.username(),
+        var entity = new User(UUID.randomUUID(),
                 createUserDto.email(),
+                createUserDto.username(),
                 createUserDto.password(),
                 Instant.now(),
                 null);
         var userSaved = userRepository.save(entity);
         return userSaved.getUserId();
-
     }
     public Optional<User> getUserById(String userId){
         return userRepository.findById(UUID.fromString(userId));
