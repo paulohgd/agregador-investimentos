@@ -32,11 +32,11 @@ public class User {
     public User() {
     }
 
-    public User(UUID userId, String username, String password, String email, Instant creationTimeStamp, Instant updateTimeStamp) {
+    public User(UUID userId, String email, String username, String password, Instant creationTimeStamp, Instant updateTimeStamp) {
         this.userId = userId;
+        this.email = email;
         this.username = username;
         this.password = password;
-        this.email = email;
         this.creationTimeStamp = creationTimeStamp;
         this.updateTimeStamp = updateTimeStamp;
     }
